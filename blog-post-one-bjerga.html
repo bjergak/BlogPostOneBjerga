@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>blog-post-one-bjerga</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="how-to-use-pandoc">How to use Pandoc</h1>
+<h3 id="creating-html-files-and-converting-a-file-from-markkdown-to-html">Creating HTML Files and Converting a File from Markkdown to HTML</h3>
+<p>This article will teach you how to do two things: how to use the text editor on Pandoc to create a markdown file, and how to convert a pre-made markdown file into an html file.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>To use Pandoc, you will have to install it on your computer. It can be installed using your terminal. If you have not installed Pandoc yet, you can follow the instructions <a href="https://pandoc.org/installing.html">here.</a></p>
+<h2 id="creating-a-html-file-using-pandoc">Creating a HTML file using Pandoc</h2>
+<h3 id="step-1-open-a-terminal-and-go-to-directory">Step 1: Open a terminal and go to Directory</h3>
+<p>Open the terminal of your choosing. Once in the terminal, check to see where you are (directory-wise). This can be done by typing:</p>
+<pre><code>pwd</code></pre>
+<p>If your are using Windows, type:</p>
+<pre><code>echo %cd%</code></pre>
+<p>And hit enter. For this tutorial, we will be navigating to the Documents directory. To do this, type:</p>
+<pre><code>cd Documents</code></pre>
+<p>And hit enter. To make sure you are in the correct directory, type pwd (or echo %cd%) to check.</p>
+<p>Now that you are in the Documents directory, create a subdirectory. In this case, we can call it “pandoc-test.” To create this subdirectory, type the following into your command prompt:</p>
+<pre><code>mkdir pandoc-test</code></pre>
+<p>And hit enter. Change to this directory by typing:</p>
+<pre><code>cd pandoc-test</code></pre>
+<p>You can check to make sure you are in the correct directory by typing pwd or echo %cd%. Now you are ready to create a Markdown file!</p>
+<h3 id="step-2-using-pandoc">Step 2: Using Pandoc</h3>
+<p>In your terminal, type the following to open Pandoc:</p>
+<pre><code>pandoc</code></pre>
+<p>Hit enter. You should see a cursor on your screen, waiting for you to type something. Type something following the Markdown format. For example:</p>
+<pre><code>Hello *world*!
+
+-What&#39;s
+-Up?</code></pre>
+<p>When you have finished typing what you want, type Ctrl-D, or Ctrl-Z followed by Enter on Windows. After this is done, your text will be converted to HTML!</p>
+<p>By default, Pandoc filters Markdown files into HTML files. However, you can change the order that it is filtered. For example, you can convert HTML files to Markdown files by entering the following:</p>
+<pre><code>pandoc -f html -t markdown</code></pre>
+<p>Then you can type HTML code, hit Ctrl-D (or Ctrl-Z then Enter on Windows), and it will be converted to Markdown.</p>
+<p>Now let’s learn how to convert a pre-made Markdown file to HTML!</p>
+<h2 id="converting-markdown-file-to-html-file">Converting Markdown File to HTML File</h2>
+<p>Converting a Markdown file to a HTML file is really easy! Just follow these two easy steps!</p>
+<h3 id="step-1-go-to-your-terminal">Step 1: Go to your Terminal</h3>
+<p>Make sure you are in the correct directory. Once you are in the correct directory, you will need to make sure your Markdown file is there. This can be done by typing:</p>
+<pre><code>ls</code></pre>
+<p>If you are using a Windows device, type the following:</p>
+<pre><code>dir</code></pre>
+<p>If you see the file that you created, you are on the right track!</p>
+<h3 id="step-2-convert-the-file">Step 2: Convert the File</h3>
+<p>Now that you are in the location of your Markdown file, you are ready to convert it to a HTML file! To convert the file, type this command:</p>
+<pre><code>pandoc yourfile.md -f markdown -t html -s -o yourfile.html</code></pre>
+<p>The -s option tells Pandoc to create a “standalone” file. The -o yourfile.html tells Pandoc to put the output in the file “yourfile.html.” -f markdown and -t html could have been left out, since the default is to convert from Markdown to HTML, but it is always good practice to include them.</p>
+<p>In this case, “yourfile” would be the name of the file <em>you</em> made.</p>
+<h3 id="step-3-check-for-the-file">Step 3: Check for the File</h3>
+<p>To make sure that Pandoc successfully converted your file, check to see that the HTML file was created. Look in your directory to find the file. This can be done by typing:</p>
+<pre><code>ls</code></pre>
+<p>or:</p>
+<pre><code>dir</code></pre>
+<p>If you are on Windows. Once you have confirmed the location of your file, you can open your HTML file in a browser. To do this, type the following into your command prompt:</p>
+<pre><code>open yourfile.html</code></pre>
+<p>If you are on Windows, type:</p>
+<pre><code>.\yourfile.html</code></pre>
+<p>If your file opens in a browser, SUCCESS! You have officially converted a Markdown file to a HTML file!</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Pandoc is a very useful tool! It helps save time <em>and</em> avoids the tedious HTML coding!</p>
+</body>
+</html>
